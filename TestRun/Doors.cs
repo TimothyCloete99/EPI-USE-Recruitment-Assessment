@@ -12,7 +12,7 @@ namespace TestRun
         public string LockDoor(string doorID)
         {
 
-            StreamReader r = new StreamReader(@"F:\EPI-USE Labs Recruiting Exercise 2020\Testing\TestRun\TestRun\system_data.json");
+            StreamReader r = new StreamReader(@"F:\EPI-USE Labs Recruiting Exercise 2020\Testing\TestRun\TestRun\Test\system_data.json");
             string json = r.ReadToEnd();
             Root door = JsonConvert.DeserializeObject<Root>(json);
             string status = "";
@@ -31,13 +31,13 @@ namespace TestRun
                     break;
                 }
             }
-            return status;
+            return status = "Door: " + doorID + " Locked!";
         }
 
         public string UnlockDoor(string doorID)
         {
 
-            StreamReader r = new StreamReader(@"F:\EPI-USE Labs Recruiting Exercise 2020\Testing\TestRun\TestRun\system_data.json");
+            StreamReader r = new StreamReader(@"F:\EPI-USE Labs Recruiting Exercise 2020\Testing\TestRun\TestRun\Test\system_data.json");
             string json = r.ReadToEnd();
             Root door = JsonConvert.DeserializeObject<Root>(json);
             string status = "";
@@ -56,7 +56,7 @@ namespace TestRun
                     break;
                 }
             }
-            return status;
+            return status = "Door: " + doorID + " Locked!";
         }
     }
 }
