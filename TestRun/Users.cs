@@ -15,7 +15,7 @@ class Users
     /// </summary>
     public void Encrypt()
     {
-        StreamReader r = new StreamReader(@"F:\EPI-USE Labs Recruiting Exercise 2020\Testing\TestRun\registered_users.json");
+        StreamReader r = new StreamReader(@"F:\EPI-USE Labs Recruiting Exercise 2020\Testing\TestRun\TestRun\registered_users.json");
         string json = r.ReadToEnd();
         RootUser users = JsonConvert.DeserializeObject<RootUser>(json); 
 
@@ -34,7 +34,7 @@ class Users
     /// </summary>
     public void Decrypt()
     {
-        StreamReader r = new StreamReader(@"F:\EPI-USE Labs Recruiting Exercise 2020\Testing\TestRun\registered_users.json");
+        StreamReader r = new StreamReader(@"F:\EPI-USE Labs Recruiting Exercise 2020\Testing\TestRun\TestRun\registered_users.json");
         string json = r.ReadToEnd();
         RootUser users = JsonConvert.DeserializeObject<RootUser>(json);
         foreach (var item in users.registered_users)
@@ -65,7 +65,7 @@ class Users
     public bool Validate(string Username, string Password)
     {
         Decrypt();
-        StreamReader r = new StreamReader(@"F:\EPI-USE Labs Recruiting Exercise 2020\Testing\TestRun\registered_users.json");
+        StreamReader r = new StreamReader(@"F:\EPI-USE Labs Recruiting Exercise 2020\Testing\TestRun\TestRun\registered_users.json");
         string json = r.ReadToEnd();
 
         RootUser users = JsonConvert.DeserializeObject<RootUser>(json);
