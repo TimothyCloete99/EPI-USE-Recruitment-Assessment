@@ -82,6 +82,7 @@ namespace TestRun
             {
                     if (item.status == "open")  //If the door status is open
                     {
+
                         doors += " " + item.name + " (UNLOCKED),"; //Join the string with the name of the door and (UNLOCKED) followed by a ","
                     }
                     else

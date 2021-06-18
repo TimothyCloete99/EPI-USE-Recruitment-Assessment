@@ -16,7 +16,7 @@ namespace TestRun
         /// </summary>
         public void ViewHierarchy()
         { 
-            StreamReader r = new StreamReader(@"F:\EPI-USE Labs Recruiting Exercise 2020\Testing\TestRun\system_data.json");
+            StreamReader r = new StreamReader(@"F:\EPI-USE Labs Recruiting Exercise 2020\Testing\TestRun\TestRun\system_data.json");
             string json = r.ReadToEnd();
             Root data_root = JsonConvert.DeserializeObject<Root>(json);  //Declaring the root from System_data class using Json convert Deserialing the object with the json path 
 
